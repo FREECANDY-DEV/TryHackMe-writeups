@@ -112,7 +112,7 @@ Navigating to the `/staff` endpoint in the browser confirms our access to the St
 *We are inside the dashboard. We look for any feature that takes our input and renders it back to the screen. The "Cabana Desk" allows us to customize booking messages.*
 
 <!-- Add your Cabana Desk UI screenshot here -->
-> **[📷 SCREENSHOT PLACEHOLDER: The Cabana Desk UI]**
+> ![The Cabana Desk UI](./images/cabana_desk.png)
 
 The UI explicitly tells us: `(EJS — use <%= guest %> to personalise)`.
 The developers left the door wide open. EJS (Embedded JavaScript) is a templating engine. If we can inject EJS tags, we can force the server to execute arbitrary JavaScript on the underlying operating system.
