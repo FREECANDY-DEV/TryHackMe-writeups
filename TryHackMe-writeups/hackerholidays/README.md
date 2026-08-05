@@ -1,19 +1,40 @@
-# 🎄 Hacker Holidays 2026 Writeups
+# 🌴 TryHackMe: Hacker Holidays 2026 - The Byte Lotus
 
-> ![TryHackMe Hacker Holidays Dashboard](./images/thm_dashboard.png)
+![Hacker Holidays Event Map](./images/event_map.png)
 
-Welcome to my collection of writeups for the **TryHackMe Hacker Holidays 2026** event! 
+Welcome to my writeup repository for the **TryHackMe Hacker Holidays 2026** event! 
 
-## 📖 About the Event
-Hacker Holidays is a special seasonal Boot2Root CTF event hosted by TryHackMe. It features an interactive storyline, unique vulnerable machines, and progressively challenging scenarios spanning web exploitation, reverse engineering, forensics, and privilege escalation.
+## 📖 Welcome to The Byte Lotus
+**"A five-star resort with a zero-star security posture."**
 
-## 🏆 Completed Rooms
+The Hacker Holiday event is a massive, gamified cyber security training campaign hosted by TryHackMe. It drops 14 days of free, self-contained hacking challenges ranging from OSINT, Web Exploitation, Cloud Security, Forensics, and AI Prompt Attacks.
 
-| Day | Act | Room Name | Difficulty | Writeup Link |
-|:---:|:---:|:---|:---:|:---|
-| 7 | Act 2 - Drift | **Do Not Disturb** | Medium | [Read Writeup](./Do%20Not%20Disturb.md) |
+> *"Over 14 days, move through the resort one room at a time. The guests are hiding something. The staff is hiding something. And VERA, the AI concierge, knows absolutely everything..."*
 
-*(More writeups will be added as the event progresses!)*
+The difficulty scales up as you progress through the resort. Along the way, we cross paths with suspicious guests, a paranoid resort IT guy, and an overarching mystery to solve.
+
+## 🏆 The Rooms / The Path
+
+Here is my progress tracking the footprint of whoever was inside The Byte Lotus before us:
+
+| Day | Room Name | Status | Writeup Link |
+|:---:|:---|:---:|:---|
+| 1 | **The Concierge Knows Too Much** | ✅ Completed | *Coming soon* |
+| 2 | **Room 404** | ✅ Completed | *Coming soon* |
+| 3 | **Complimentary** | ✅ Completed | *Coming soon* |
+| 4 | **Packed Light** | ✅ Completed | *Coming soon* |
+| 5 | **Beach Bar** | ✅ Completed | *Coming soon* |
+| 6 | **Overheard at Breakfast** | ✅ Completed | *Coming soon* |
+| 7 | **Do Not Disturb** *(Act 2 - Drift)* | ✅ Completed | [Read Writeup](./Do%20Not%20Disturb.md) |
+| 8 | **Towel on the Sunbed** | ⏳ Pending | - |
+| 9 | **CryptoCabana** | ⏳ Pending | - |
+| 10 | **The Hollow Shell** | 🔒 Locked | - |
+| 11 | **Infinity Pool** | 🔒 Locked | - |
+| 12 | **After Hours** | 🔒 Locked | - |
+| 13 | **The Guestbook** | 🔒 Locked | - |
+| 14 | **Management Wants a Word** | 🔒 Locked | - |
 
 ---
-*Documented and exploited by FREECANDY-DEV*
+*The WiFi is open. Everything here is complimentary, including access to things you were never meant to find.*
+
+**Documented and exploited by FREECANDY-DEV**
