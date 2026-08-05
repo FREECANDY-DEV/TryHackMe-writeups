@@ -21,7 +21,7 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 |:---:|:---|:---:|:---|
 | 1 | **The Concierge Knows Too Much** | ✅ Completed | *Coming soon* |
 | 2 | **Room 404** | ✅ Completed | *Coming soon* |
-| 3 | **Complimentary** | ✅ Completed | *Coming soon* |
+| 3 | **Complimentary** | ✅ Completed | [Read Writeup](./Complimentary.md) |
 | 4 | **Packed Light** | ✅ Completed | *Coming soon* |
 | 5 | **Beach Bar** | ✅ Completed | *Coming soon* |
 | 6 | **Overheard at Breakfast** | ✅ Completed | *Coming soon* |
