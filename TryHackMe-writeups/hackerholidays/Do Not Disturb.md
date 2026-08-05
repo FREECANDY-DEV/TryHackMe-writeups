@@ -1,6 +1,6 @@
 # 🛎️ Do Not Disturb: The Ultimate Hacker's Walkthrough
 
-![Hacker](./images/hacker_logo.png)
+<img width="200" height="216" alt="image" src="https://github.com/user-attachments/assets/3b738a73-93e5-4ba6-bc81-5e5090def41e" />
 
 **Room:** Do Not Disturb (Hacker Holidays 2026 - Day 7: Act 2 - Drift)  
 **Difficulty:** Medium | **Category:** Boot2Root  
