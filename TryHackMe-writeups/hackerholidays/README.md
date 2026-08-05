@@ -1,6 +1,6 @@
 # 🎄 Hacker Holidays 2026 Writeups
 
-> **[📷 SCREENSHOT PLACEHOLDER: TryHackMe Hacker Holidays Dashboard]**
+> ![TryHackMe Hacker Holidays Dashboard](./images/thm_dashboard.png)
 
 Welcome to my collection of writeups for the **TryHackMe Hacker Holidays 2026** event! 
 

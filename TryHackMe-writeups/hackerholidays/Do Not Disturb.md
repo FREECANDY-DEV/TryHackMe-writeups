@@ -1,6 +1,6 @@
 # 🛎️ Do Not Disturb: The Ultimate Hacker's Walkthrough
 
-![Hacker](/C:/Users/emilt/.gemini/antigravity/brain/f980378b-1386-43b9-be19-b523045aca15/.user_uploaded/media_1785912470161.png)
+![Hacker](./images/hacker_logo.png)
 
 **Room:** Do Not Disturb (Hacker Holidays 2026 - Day 7: Act 2 - Drift)  
 **Difficulty:** Medium | **Category:** Boot2Root  
@@ -53,11 +53,11 @@ feroxbuster --url http://10.114.177.55/ -x php,txt,html
 We discover a few key endpoints:
 *   `/` (200 OK) - The main login page.
 <!-- Add your Byte Lotus Login Page screenshot here -->
-> **[📷 SCREENSHOT PLACEHOLDER: Byte Lotus Login Page]**
+> ![Byte Lotus Login Page](./images/login_page.png)
 
 *   `/staff` (403 Forbidden) - A protected dashboard explicitly stating "Staff access only."
 <!-- Add your 403 Forbidden Staff Page screenshot here -->
-> **[📷 SCREENSHOT PLACEHOLDER: 403 Forbidden Staff Page]**
+> ![403 Forbidden Staff Page](./images/403_page.png)
 
 ---
 
