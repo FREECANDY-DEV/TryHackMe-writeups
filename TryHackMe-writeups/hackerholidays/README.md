@@ -1,3 +1,5 @@
+<div align="center">
+
 # 🌴 TryHackMe: Hacker Holidays 2026 - The Byte Lotus
 
 ![Hacker Holidays Event Map](./images/event_map.png)
@@ -38,3 +40,5 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 *The WiFi is open. Everything here is complimentary, including access to things you were never meant to find.*
 
 **Documented and exploited by FREECANDY-DEV**
+
+</div>
