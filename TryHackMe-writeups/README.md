@@ -11,8 +11,10 @@ This repository serves as a structured collection of penetration testing, cloud 
 ```text
 TryHackMe-writeups/
 └── hackerholidays/
-    └── Complimentary/
-        └── README.md
+    ├── Complimentary.md
+    ├── Do Not Disturb.md
+    ├── Easter_Egg.md
+    └── README.md
 ```
 
 ---
@@ -21,7 +23,9 @@ TryHackMe-writeups/
 
 | Event / Category | Room / Challenge Name | Focus / Vulnerability Type | Write-Up Link |
 | :--- | :--- | :--- | :--- |
-| **Hacker Holidays** | **Complimentary** | AWS Cognito Unauthenticated Role & DynamoDB BOLA/Scan | [Complimentary Write-Up](./hackerholidays/Complimentary/README.md) |
+| **Hacker Holidays** | **Complimentary** | AWS Cognito Unauthenticated Role & DynamoDB BOLA | [Read Write-Up](./hackerholidays/Complimentary.md) |
+| **Hacker Holidays** | **Do Not Disturb** | Node.js NoSQLi, SSTI, PrivEsc via Disk Group | [Read Write-Up](./hackerholidays/Do%20Not%20Disturb.md) |
+| **Hacker Holidays** | **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Document](./hackerholidays/Easter_Egg.md) |
 
 ---
 
