@@ -15,8 +15,8 @@ This repository serves as a structured collection of penetration testing, cloud 
 
 | Stat | Value |
 |:---|:---|
-| **Alias** | `[REDACTED] [0x12][SHOGUN]` |
-| **Level** | 77 (Student) |
+| **Alias** | `[REDACTED]` |
+| **Level** | `0x12 [SHOGUN]` (Level 17) |
 | **Global Rank** | Top 1% (Rank ~680) |
 | **Completed Rooms** | 750+ |
 | **Badges** | 78 |
