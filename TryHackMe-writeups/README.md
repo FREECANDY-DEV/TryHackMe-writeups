@@ -34,7 +34,7 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 | 5 | **Beach Bar** | ✅ Completed | *Coming soon* |
 | 6 | **Overheard at Breakfast** | ✅ Completed | *Coming soon* |
 | 7 | **Do Not Disturb** *(Act 2 - Drift)* | ✅ Completed | [Read Writeup](./hackerholidays/Do%20Not%20Disturb.md) |
-| 8 | **Towel on the Sunbed** | ⏳ Pending | - |
+| 8 | **Towel on the Sunbed** | ✅ Completed | [Read Writeup](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
 | 9 | **CryptoCabana** | ⏳ Pending | - |
 | 10 | **The Hollow Shell** | 🔒 Locked | - |
 | 11 | **Infinity Pool** | 🔒 Locked | - |
@@ -51,6 +51,7 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 | **Hacker Holidays** | **Complimentary** | AWS Cognito Unauthenticated Role & DynamoDB BOLA | [Read Write-Up](./hackerholidays/Complimentary.md) |
 | **Hacker Holidays** | **Do Not Disturb** | Node.js NoSQLi, SSTI, PrivEsc via Disk Group | [Read Write-Up](./hackerholidays/Do%20Not%20Disturb.md) |
 | **Hacker Holidays** | **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Document](./hackerholidays/Easter_Egg.md) |
+| **Hacker Holidays** | **Towel on the Sunbed** | Business Logic, TOCTOU Race, API Abuse | [Read Write-Up](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
 
 ---
 
