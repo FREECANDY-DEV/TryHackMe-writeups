@@ -34,7 +34,8 @@ TryHackMe-writeups/
     ├── Easter_Egg.md
     ├── README.md
     ├── CryptoCabana.md
-    └── Towel on the Sunbed.md
+    ├── Towel on the Sunbed.md
+    └── The Hollow Shell.md
 ```
 
 ---
@@ -48,6 +49,7 @@ TryHackMe-writeups/
 | **Hacker Holidays** | **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Document](./hackerholidays/Easter_Egg.md) |
 | **Hacker Holidays** | **Towel on the Sunbed** | Business Logic, TOCTOU Race, API Abuse | [Read Write-Up](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
 | **Hacker Holidays** | **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Write-Up](./hackerholidays/CryptoCabana.md) |
+| **Hacker Holidays** | **The Hollow Shell** | Zip Slip → SSTI → RCE (Flask) | [Read Write-Up](./hackerholidays/The%20Hollow%20Shell.md) |
 
 ---
 

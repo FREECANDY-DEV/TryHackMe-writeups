@@ -30,7 +30,7 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 | 7 | **Do Not Disturb** *(Act 2 - Drift)* | ✅ Completed | [Read Writeup](./Do%20Not%20Disturb.md) |
 | 8 | **Towel on the Sunbed** | ✅ Completed | [Read Writeup](./Towel%20on%20the%20Sunbed.md) |
 | 9 | **CryptoCabana** | ✅ Completed | [Read Writeup](./CryptoCabana.md) |
-| 10 | **The Hollow Shell** | 🔒 Locked | - |
+| 10 | **The Hollow Shell** | ✅ Completed | [Read Writeup](./The%20Hollow%20Shell.md) |
 | 11 | **Infinity Pool** | 🔒 Locked | - |
 | 12 | **After Hours** | 🔒 Locked | - |
 | 13 | **The Guestbook** | 🔒 Locked | - |

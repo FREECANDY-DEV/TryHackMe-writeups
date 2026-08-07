@@ -184,7 +184,7 @@ Four secrets — the seed phrase was split into shards. Pull the current values:
 ```bash
 ┌──(hacker㉿kali)-[~]
 └─$ az keyvault secret show --vault-name ccabana-kv-f5scjagc --name key-shard-1 --query value -o tsv
-THM{n0t_ur
+[REDACTED]
 
 ┌──(hacker㉿kali)-[~]
 └─$ az keyvault secret show --vault-name ccabana-kv-f5scjagc --name key-shard-2 --query value -o tsv
@@ -192,7 +192,7 @@ Rotated this after IT flagged it -- old value should still be recoverable if you
 
 ┌──(hacker㉿kali)-[~]
 └─$ az keyvault secret show --vault-name ccabana-kv-f5scjagc --name key-shard-3 --query value -o tsv
-ur_c01ns!}
+[REDACTED]
 ```
 
 > *"a vault that won't give up the real values on the first ask."* — shard-1 and shard-3 give real fragments, but **key-shard-2 was rotated**: its current value is just an IT note telling us the old value is still recoverable.
@@ -215,7 +215,7 @@ Two versions. The older one is the original shard:
 ```bash
 ┌──(hacker㉿kali)-[~]
 └─$ az keyvault secret show --vault-name ccabana-kv-f5scjagc --name key-shard-2 --version 3d6492d2c6f74123bc754a9ded22b2a0 --query value -o tsv
-_k3ys_n0t_
+[REDACTED]
 ```
 
 ---
@@ -224,17 +224,17 @@ _k3ys_n0t_
 
 | Secret | Value |
 | :--- | :--- |
-| `key-shard-1` (current) | `THM{n0t_ur` |
-| `key-shard-2` (previous version) | `_k3ys_n0t_` |
-| `key-shard-3` (current) | `ur_c01ns!}` |
+| `key-shard-1` (current) | `[REDACTED]` |
+| `key-shard-2` (previous version) | `[REDACTED]` |
+| `key-shard-3` (current) | `[REDACTED]` |
 
 ```text
-THM{n0t_ur  +  _k3ys_n0t_  +  ur_c01ns!}
+[REDACTED] + [REDACTED] + [REDACTED]
 ```
 
 **Flag:** `THM{REDACTED}`
 
-*(Assembled form matches the room's answer format `***{***_**_****_***_**_******}`: `n0t`/`ur`/`k3ys`/`n0t`/`ur`/`c01ns!`.)*
+*(Assembled form matches the room's answer format `***{***_**_****_***_**_******}`; the individual shard values are censored so the flag can't be copy-pasted.)*
 
 ---
 
