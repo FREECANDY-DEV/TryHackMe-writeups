@@ -33,6 +33,7 @@ TryHackMe-writeups/
     ├── Do Not Disturb.md
     ├── Easter_Egg.md
     ├── README.md
+    ├── CryptoCabana.md
     └── Towel on the Sunbed.md
 ```
 
@@ -46,6 +47,7 @@ TryHackMe-writeups/
 | **Hacker Holidays** | **Do Not Disturb** | Node.js NoSQLi, SSTI, PrivEsc via Disk Group | [Read Write-Up](./hackerholidays/Do%20Not%20Disturb.md) |
 | **Hacker Holidays** | **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Document](./hackerholidays/Easter_Egg.md) |
 | **Hacker Holidays** | **Towel on the Sunbed** | Business Logic, TOCTOU Race, API Abuse | [Read Write-Up](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
+| **Hacker Holidays** | **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Write-Up](./hackerholidays/CryptoCabana.md) |
 
 ---
 
