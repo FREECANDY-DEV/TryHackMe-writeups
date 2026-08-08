@@ -31,7 +31,7 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 | 8 | **Towel on the Sunbed** | ✅ Completed | [Read Writeup](./Towel%20on%20the%20Sunbed.md) |
 | 9 | **CryptoCabana** | ✅ Completed | [Read Writeup](./CryptoCabana.md) |
 | 10 | **The Hollow Shell** | ✅ Completed | [Read Writeup](./The%20Hollow%20Shell.md) |
-| 11 | **Infinity Pool** | 🔒 Locked | - |
+| 11 | **Infinity Pool** | ✅ Completed | [Read Writeup](./Infinity_Pool.md) |
 | 12 | **After Hours** | ✅ Completed | [Read Writeup](./After_Hours.md) |
 | 13 | **The Guestbook** | 🔒 Locked | - |
 | 14 | **Management Wants a Word** | 🔒 Locked | - |
