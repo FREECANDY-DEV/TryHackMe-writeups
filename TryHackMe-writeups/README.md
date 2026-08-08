@@ -2,65 +2,65 @@
 
 # 🚩 TryHackMe Write-ups Collection
 
-Welcome to my repository for **TryHackMe (THM)** CTF challenges and machine write-ups.
+Welcome to my comprehensive repository for **TryHackMe (THM)** CTF challenges, event walkthroughs, and machine write-ups.
 
-This repository serves as a structured collection of penetration testing, cloud security, and vulnerability exploitation write-ups, complete with execution logs, scripts, and remediation guidance.
+This repository serves as a structured, detailed collection of penetration testing, cloud security, and vulnerability exploitation guides. Each write-up focuses on the **"why"** and **"how"**, including full execution logs, methodologies, and remediation advice.
 
 ---
 
-# 🌴 TryHackMe: Hacker Holidays 2026 - The Byte Lotus
+## 📚 What's in this Repository?
+
+The write-ups are organized by events and overarching themes. You will find hands-on exploitation techniques covering:
+
+- 🌐 **Web Application Exploitation:** Command Injection, SQLi, NoSQLi, SSTI, API Abuse, BOLA/IDOR
+- ☁️ **Cloud Security:** AWS (Cognito, DynamoDB), Azure (SAS Leaks, Key Vaults), IAM Misconfigurations
+- 🐧 **Boot2Root & Privilege Escalation:** Initial access vectors, port forwarding, and Linux/Windows local privilege escalation
+- 🕵️ **OSINT & Forensics:** Information gathering, decoding, and tracing digital footprints
+- 🛠️ **Business Logic Flaws:** Race conditions (TOCTOU) and state manipulation
+
+---
+
+## 🌴 Featured Event: Hacker Holidays 2026 - The Byte Lotus
 
 ![Hacker Holidays Event Map](./hackerholidays/images/event_map.png)
 
-## 📖 Welcome to The Byte Lotus
 **"A five-star resort with a zero-star security posture."**
 
-The Hacker Holiday event is a massive, gamified cyber security training campaign hosted by TryHackMe. It drops 14 days of free, self-contained hacking challenges ranging from OSINT, Web Exploitation, Cloud Security, Forensics, and AI Prompt Attacks.
+A massive 14-day gamified cyber security campaign hosted by TryHackMe. The difficulty scales up as you progress through the resort, uncovering mysteries, bypassing AI concierges, and exploiting critical hotel infrastructure.
 
-> *"Over 14 days, move through the resort one room at a time. The guests are hiding something. The staff is hiding something. And VERA, the AI concierge, knows absolutely everything..."*
+### 📝 Completed Rooms
+| Room Name | Vulnerability Focus | Write-Up Link |
+| :--- | :--- | :--- |
+| **Complimentary** | AWS Cognito Unauthenticated Role & DynamoDB BOLA | [Read Here](./hackerholidays/Complimentary.md) |
+| **Do Not Disturb** | Node.js NoSQLi, SSTI, PrivEsc via Disk Group | [Read Here](./hackerholidays/Do%20Not%20Disturb.md) |
+| **Towel on the Sunbed** | Business Logic, TOCTOU Race Condition, API Abuse | [Read Here](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
+| **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Here](./hackerholidays/CryptoCabana.md) |
+| **Infinity Pool** | OS Command Injection, SSH Port Forwarding, Token Leak | [Read Here](./hackerholidays/Infinity_Pool.md) |
+| **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Here](./hackerholidays/Easter_Egg.md) |
 
-The difficulty scales up as you progress through the resort. Along the way, we cross paths with suspicious guests, a paranoid resort IT guy, and an overarching mystery to solve.
-
-## 🏆 The Rooms / The Path
-
-Here is my progress tracking the footprint of whoever was inside The Byte Lotus before us:
-
-| Day | Room Name | Status | Writeup Link |
-|:---:|:---|:---:|:---|
-| 1 | **The Concierge Knows Too Much** | ✅ Completed | *Coming soon* |
-| 2 | **Room 404** | ✅ Completed | *Coming soon* |
-| 3 | **Complimentary** | ✅ Completed | [Read Writeup](./hackerholidays/Complimentary.md) |
-| 4 | **Packed Light** | ✅ Completed | *Coming soon* |
-| 5 | **Beach Bar** | ✅ Completed | *Coming soon* |
-| 6 | **Overheard at Breakfast** | ✅ Completed | *Coming soon* |
-| 7 | **Do Not Disturb** *(Act 2 - Drift)* | ✅ Completed | [Read Writeup](./hackerholidays/Do%20Not%20Disturb.md) |
-| 8 | **Towel on the Sunbed** | ✅ Completed | [Read Writeup](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
-| 9 | **CryptoCabana** | ✅ Completed | [Read Writeup](./hackerholidays/CryptoCabana.md) |
-| 10 | **The Hollow Shell** | 🔒 Locked | - |
-| 11 | **Infinity Pool** | 🔒 Locked | - |
-| 12 | **After Hours** | 🔒 Locked | - |
-| 13 | **The Guestbook** | 🔒 Locked | - |
-| 14 | **Management Wants a Word** | 🔒 Locked | - |
+> 📁 *For a full breakdown of the event, visit the [Hacker Holidays Directory](./hackerholidays/).*
 
 ---
 
-## 📁 Event Writeups Index
+## 🛠️ Repository Structure
 
-| Event / Category | Room / Challenge Name | Focus / Vulnerability Type | Write-Up Link |
-| :--- | :--- | :--- | :--- |
-| **Hacker Holidays** | **Complimentary** | AWS Cognito Unauthenticated Role & DynamoDB BOLA | [Read Write-Up](./hackerholidays/Complimentary.md) |
-| **Hacker Holidays** | **Do Not Disturb** | Node.js NoSQLi, SSTI, PrivEsc via Disk Group | [Read Write-Up](./hackerholidays/Do%20Not%20Disturb.md) |
-| **Hacker Holidays** | **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Document](./hackerholidays/Easter_Egg.md) |
-| **Hacker Holidays** | **Towel on the Sunbed** | Business Logic, TOCTOU Race, API Abuse | [Read Write-Up](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
-| **Hacker Holidays** | **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Write-Up](./hackerholidays/CryptoCabana.md) |
+```text
+📦 TryHackMe-writeups
+ ┣ 📂 hackerholidays/       # Event-specific folder for Hacker Holidays: The Byte Lotus
+ ┃ ┣ 📂 images/             # Screenshots, payloads, and diagrams
+ ┃ ┣ 📜 Complimentary.md    # Room Walkthrough
+ ┃ ┣ 📜 Infinity_Pool.md    # Room Walkthrough
+ ┃ ┗ 📜 ...                 # Other event rooms
+ ┣ 📂 web/                  # Coming soon: Standalone web challenge write-ups
+ ┣ 📂 boot2root/            # Coming soon: Standard boot2root machine write-ups
+ ┗ 📜 README.md             # This index file
+```
 
 ---
 
 ## ⚖️ Disclaimer
 
-All write-ups, scripts, and commands documented in this repository are created strictly for educational purposes and authorized security research on CTF platforms.
-
-*The WiFi is open. Everything here is complimentary, including access to things you were never meant to find.*
+All write-ups, scripts, and commands documented in this repository are created strictly for educational purposes and authorized security research on CTF platforms. Please respect the rules of engagement for each platform and do not use these techniques against targets you do not have permission to test.
 
 **Documented and exploited by FREECANDY-DEV**
 
