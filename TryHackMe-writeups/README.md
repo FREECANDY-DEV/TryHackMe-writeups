@@ -22,7 +22,7 @@ The write-ups are organized by events and overarching themes. You will find hand
 
 ## 🌴 Featured Event: Hacker Holidays 2026 - The Byte Lotus
 
-![Hacker Holidays Event Map](./hackerholidays/images/event_map.png)
+![Welcome to The Byte Lotus](./hackerholidays/images/resort_homepage.png)
 
 **"A five-star resort with a zero-star security posture."**
 
