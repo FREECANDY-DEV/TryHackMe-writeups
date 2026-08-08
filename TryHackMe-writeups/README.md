@@ -40,21 +40,7 @@ A massive 14-day gamified cyber security campaign hosted by TryHackMe. The diffi
 
 > 📁 *For a full breakdown of the event, visit the [Hacker Holidays Directory](./hackerholidays/).*
 
----
 
-## 🛠️ Repository Structure
-
-```text
-📦 TryHackMe-writeups
- ┣ 📂 hackerholidays/       # Event-specific folder for Hacker Holidays: The Byte Lotus
- ┃ ┣ 📂 images/             # Screenshots, payloads, and diagrams
- ┃ ┣ 📜 Complimentary.md    # Room Walkthrough
- ┃ ┣ 📜 Infinity_Pool.md    # Room Walkthrough
- ┃ ┗ 📜 ...                 # Other event rooms
- ┣ 📂 web/                  # Coming soon: Standalone web challenge write-ups
- ┣ 📂 boot2root/            # Coming soon: Standard boot2root machine write-ups
- ┗ 📜 README.md             # This index file
-```
 
 ---
 
