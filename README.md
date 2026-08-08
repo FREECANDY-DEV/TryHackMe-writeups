@@ -24,21 +24,6 @@ This repository serves as a structured collection of penetration testing, cloud 
 
 ---
 
-## 📁 Repository Structure
-
-```text
-TryHackMe-writeups/
-└── hackerholidays/
-    ├── Complimentary.md
-    ├── Do Not Disturb.md
-    ├── Easter_Egg.md
-    ├── README.md
-    ├── CryptoCabana.md
-    ├── Towel on the Sunbed.md
-    └── The Hollow Shell.md
-```
-
----
 
 ## 📝 Available Write-ups
 
