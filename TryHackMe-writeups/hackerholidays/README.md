@@ -32,7 +32,7 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 | 9 | **CryptoCabana** | ✅ Completed | [Read Writeup](./CryptoCabana.md) |
 | 10 | **The Hollow Shell** | ✅ Completed | [Read Writeup](./The%20Hollow%20Shell.md) |
 | 11 | **Infinity Pool** | 🔒 Locked | - |
-| 12 | **After Hours** | 🔒 Locked | - |
+| 12 | **After Hours** | ✅ Completed | [Read Writeup](./After_Hours.md) |
 | 13 | **The Guestbook** | 🔒 Locked | - |
 | 14 | **Management Wants a Word** | 🔒 Locked | - |
 
