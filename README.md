@@ -39,6 +39,11 @@ This repository serves as a structured collection of penetration testing, cloud 
 | **Hacker Holidays** | **After Hours** | Windows Persistence, Malware Staging, LOLBins | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_12_After_Hours.md) |
 | **Hacker Holidays** | **The Guestbook** | AI Guardrail Bypass, Prompt Injection, VERA Function Calling | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_13_The_Guestbook.md) |
 | **Hacker Holidays** | **Management Wants a Word** | VeraCrypt, DPAPI, Chrome Credential Forensics | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_14_Management_Wants_a_Word.md) |
+| **Hacker Holidays** | **The Concierge Knows Too Much** | AI Prompt Injection, Social Engineering, LLM Security | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_01_The_Concierge_Knows_Too_Much.md) |
+| **Hacker Holidays** | **Room 404** | Exposed .git Repository, Information Disclosure | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_02_Room_404.md) |
+| **Hacker Holidays** | **Packed Light** | Network Forensics, PCAP Analysis, Covert Channel | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_04_Packed_Light.md) |
+| **Hacker Holidays** | **Beach Bar** | PyYAML Deserialization, RCE, Linux PrivEsc | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_05_Beach_Bar.md) |
+| **Hacker Holidays** | **Overheard at Breakfast** | OSINT, Gravatar, Email Hashing, Base64 | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Day_06_Overheard_at_Breakfast.md) |
 
 ---
 

@@ -21,12 +21,12 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 
 | Day | Room Name | Status | Writeup Link |
 |:---:|:---|:---:|:---|
-| 1 | **The Concierge Knows Too Much** | ✅ Completed | *Coming soon* |
-| 2 | **Room 404** | ✅ Completed | *Coming soon* |
+| 1 | **The Concierge Knows Too Much** | ✅ Completed | [Read Writeup](./Day_01_The_Concierge_Knows_Too_Much.md) |
+| 2 | **Room 404** | ✅ Completed | [Read Writeup](./Day_02_Room_404.md) |
 | 3 | **Complimentary** | ✅ Completed | [Read Writeup](./Day_03_Complimentary.md) |
-| 4 | **Packed Light** | ✅ Completed | *Coming soon* |
-| 5 | **Beach Bar** | ✅ Completed | *Coming soon* |
-| 6 | **Overheard at Breakfast** | ✅ Completed | *Coming soon* |
+| 4 | **Packed Light** | ✅ Completed | [Read Writeup](./Day_04_Packed_Light.md) |
+| 5 | **Beach Bar** | ✅ Completed | [Read Writeup](./Day_05_Beach_Bar.md) |
+| 6 | **Overheard at Breakfast** | ✅ Completed | [Read Writeup](./Day_06_Overheard_at_Breakfast.md) |
 | 7 | **Do Not Disturb** *(Act 2 - Drift)* | ✅ Completed | [Read Writeup](./Day_07_Do_Not_Disturb.md) |
 | 8 | **Towel on the Sunbed** | ✅ Completed | [Read Writeup](./Day_08_Towel_on_the_Sunbed.md) |
 | 9 | **CryptoCabana** | ✅ Completed | [Read Writeup](./Day_09_CryptoCabana.md) |

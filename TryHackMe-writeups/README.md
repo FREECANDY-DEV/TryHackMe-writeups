@@ -40,6 +40,11 @@ A massive 14-day gamified cyber security campaign hosted by TryHackMe. The diffi
 | **After Hours** | Windows Persistence, Malware Staging, LOLBins | [Read Here](./hackerholidays/Day_12_After_Hours.md) |
 | **The Guestbook** | AI Guardrail Bypass, Prompt Injection, VERA Function Calling | [Read Here](./hackerholidays/Day_13_The_Guestbook.md) |
 | **Management Wants a Word** | VeraCrypt, DPAPI, Chrome Credential Forensics | [Read Here](./hackerholidays/Day_14_Management_Wants_a_Word.md) |
+| **The Concierge Knows Too Much** | AI Prompt Injection, Social Engineering, LLM Security | [Read Here](./hackerholidays/Day_01_The_Concierge_Knows_Too_Much.md) |
+| **Room 404** | Exposed .git Repository, Information Disclosure | [Read Here](./hackerholidays/Day_02_Room_404.md) |
+| **Packed Light** | Network Forensics, PCAP Analysis, Covert Channel | [Read Here](./hackerholidays/Day_04_Packed_Light.md) |
+| **Beach Bar** | PyYAML Deserialization, RCE, Linux PrivEsc | [Read Here](./hackerholidays/Day_05_Beach_Bar.md) |
+| **Overheard at Breakfast** | OSINT, Gravatar, Email Hashing, Base64 | [Read Here](./hackerholidays/Day_06_Overheard_at_Breakfast.md) |
 
 > 📁 *For a full breakdown of the event, visit the [Hacker Holidays Directory](./hackerholidays/).*
 
