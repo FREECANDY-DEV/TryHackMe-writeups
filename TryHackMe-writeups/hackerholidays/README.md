@@ -34,7 +34,7 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 | 11 | **Infinity Pool** | ✅ Completed | [Read Writeup](./Infinity_Pool.md) |
 | 12 | **After Hours** | ✅ Completed | [Read Writeup](./After_Hours.md) |
 | 13 | **The Guestbook** | ✅ Completed | [Read Writeup](./The_Guestbook.md) |
-| 14 | **Management Wants a Word** | 🔒 Locked | - |
+| 14 | **Management Wants a Word** | ✅ Completed | [Read Writeup](./Management_Wants_a_Word.md) |
 
 ---
 *The WiFi is open. Everything here is complimentary, including access to things you were never meant to find.*

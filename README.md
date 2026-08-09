@@ -36,6 +36,9 @@ This repository serves as a structured collection of penetration testing, cloud 
 | **Hacker Holidays** | **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Write-Up](./TryHackMe-writeups/hackerholidays/CryptoCabana.md) |
 | **Hacker Holidays** | **The Hollow Shell** | Zip Slip → SSTI → RCE (Flask) | [Read Write-Up](./TryHackMe-writeups/hackerholidays/The%20Hollow%20Shell.md) |
 | **Hacker Holidays** | **Infinity Pool** | OS Command Injection, SSH Port Forwarding, Token Leak | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Infinity_Pool.md) |
+| **Hacker Holidays** | **After Hours** | Windows Persistence, Malware Staging, LOLBins | [Read Write-Up](./TryHackMe-writeups/hackerholidays/After_Hours.md) |
+| **Hacker Holidays** | **The Guestbook** | AI Guardrail Bypass, Prompt Injection, VERA Function Calling | [Read Write-Up](./TryHackMe-writeups/hackerholidays/The_Guestbook.md) |
+| **Hacker Holidays** | **Management Wants a Word** | VeraCrypt, DPAPI, Chrome Credential Forensics | [Read Write-Up](./TryHackMe-writeups/hackerholidays/Management_Wants_a_Word.md) |
 
 ---
 

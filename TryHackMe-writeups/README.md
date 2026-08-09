@@ -37,6 +37,9 @@ A massive 14-day gamified cyber security campaign hosted by TryHackMe. The diffi
 | **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Here](./hackerholidays/CryptoCabana.md) |
 | **Infinity Pool** | OS Command Injection, SSH Port Forwarding, Token Leak | [Read Here](./hackerholidays/Infinity_Pool.md) |
 | **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Here](./hackerholidays/Easter_Egg.md) |
+| **After Hours** | Windows Persistence, Malware Staging, LOLBins | [Read Here](./hackerholidays/After_Hours.md) |
+| **The Guestbook** | AI Guardrail Bypass, Prompt Injection, VERA Function Calling | [Read Here](./hackerholidays/The_Guestbook.md) |
+| **Management Wants a Word** | VeraCrypt, DPAPI, Chrome Credential Forensics | [Read Here](./hackerholidays/Management_Wants_a_Word.md) |
 
 > 📁 *For a full breakdown of the event, visit the [Hacker Holidays Directory](./hackerholidays/).*
 
