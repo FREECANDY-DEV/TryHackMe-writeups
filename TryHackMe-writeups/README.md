@@ -31,15 +31,15 @@ A massive 14-day gamified cyber security campaign hosted by TryHackMe. The diffi
 ### 📝 Completed Rooms
 | Room Name | Vulnerability Focus | Write-Up Link |
 | :--- | :--- | :--- |
-| **Complimentary** | AWS Cognito Unauthenticated Role & DynamoDB BOLA | [Read Here](./hackerholidays/Complimentary.md) |
-| **Do Not Disturb** | Node.js NoSQLi, SSTI, PrivEsc via Disk Group | [Read Here](./hackerholidays/Do%20Not%20Disturb.md) |
-| **Towel on the Sunbed** | Business Logic, TOCTOU Race Condition, API Abuse | [Read Here](./hackerholidays/Towel%20on%20the%20Sunbed.md) |
-| **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Here](./hackerholidays/CryptoCabana.md) |
-| **Infinity Pool** | OS Command Injection, SSH Port Forwarding, Token Leak | [Read Here](./hackerholidays/Infinity_Pool.md) |
+| **Complimentary** | AWS Cognito Unauthenticated Role & DynamoDB BOLA | [Read Here](./hackerholidays/Day_03_Complimentary.md) |
+| **Do Not Disturb** | Node.js NoSQLi, SSTI, PrivEsc via Disk Group | [Read Here](./hackerholidays/Day_07_Do_Not_Disturb.md) |
+| **Towel on the Sunbed** | Business Logic, TOCTOU Race Condition, API Abuse | [Read Here](./hackerholidays/Day_08_Towel_on_the_Sunbed.md) |
+| **CryptoCabana** | Azure Storage SAS Leak, Key Vault Secret Versioning | [Read Here](./hackerholidays/Day_09_CryptoCabana.md) |
+| **Infinity Pool** | OS Command Injection, SSH Port Forwarding, Token Leak | [Read Here](./hackerholidays/Day_11_Infinity_Pool.md) |
 | **Easter Egg** | OSINT, Base64 Decoding, Lore | [Read Here](./hackerholidays/Easter_Egg.md) |
-| **After Hours** | Windows Persistence, Malware Staging, LOLBins | [Read Here](./hackerholidays/After_Hours.md) |
-| **The Guestbook** | AI Guardrail Bypass, Prompt Injection, VERA Function Calling | [Read Here](./hackerholidays/The_Guestbook.md) |
-| **Management Wants a Word** | VeraCrypt, DPAPI, Chrome Credential Forensics | [Read Here](./hackerholidays/Management_Wants_a_Word.md) |
+| **After Hours** | Windows Persistence, Malware Staging, LOLBins | [Read Here](./hackerholidays/Day_12_After_Hours.md) |
+| **The Guestbook** | AI Guardrail Bypass, Prompt Injection, VERA Function Calling | [Read Here](./hackerholidays/Day_13_The_Guestbook.md) |
+| **Management Wants a Word** | VeraCrypt, DPAPI, Chrome Credential Forensics | [Read Here](./hackerholidays/Day_14_Management_Wants_a_Word.md) |
 
 > 📁 *For a full breakdown of the event, visit the [Hacker Holidays Directory](./hackerholidays/).*
 

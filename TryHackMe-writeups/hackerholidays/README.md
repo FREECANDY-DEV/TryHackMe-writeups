@@ -23,18 +23,18 @@ Here is my progress tracking the footprint of whoever was inside The Byte Lotus 
 |:---:|:---|:---:|:---|
 | 1 | **The Concierge Knows Too Much** | ✅ Completed | *Coming soon* |
 | 2 | **Room 404** | ✅ Completed | *Coming soon* |
-| 3 | **Complimentary** | ✅ Completed | [Read Writeup](./Complimentary.md) |
+| 3 | **Complimentary** | ✅ Completed | [Read Writeup](./Day_03_Complimentary.md) |
 | 4 | **Packed Light** | ✅ Completed | *Coming soon* |
 | 5 | **Beach Bar** | ✅ Completed | *Coming soon* |
 | 6 | **Overheard at Breakfast** | ✅ Completed | *Coming soon* |
-| 7 | **Do Not Disturb** *(Act 2 - Drift)* | ✅ Completed | [Read Writeup](./Do%20Not%20Disturb.md) |
-| 8 | **Towel on the Sunbed** | ✅ Completed | [Read Writeup](./Towel%20on%20the%20Sunbed.md) |
-| 9 | **CryptoCabana** | ✅ Completed | [Read Writeup](./CryptoCabana.md) |
-| 10 | **The Hollow Shell** | ✅ Completed | [Read Writeup](./The%20Hollow%20Shell.md) |
-| 11 | **Infinity Pool** | ✅ Completed | [Read Writeup](./Infinity_Pool.md) |
-| 12 | **After Hours** | ✅ Completed | [Read Writeup](./After_Hours.md) |
-| 13 | **The Guestbook** | ✅ Completed | [Read Writeup](./The_Guestbook.md) |
-| 14 | **Management Wants a Word** | ✅ Completed | [Read Writeup](./Management_Wants_a_Word.md) |
+| 7 | **Do Not Disturb** *(Act 2 - Drift)* | ✅ Completed | [Read Writeup](./Day_07_Do_Not_Disturb.md) |
+| 8 | **Towel on the Sunbed** | ✅ Completed | [Read Writeup](./Day_08_Towel_on_the_Sunbed.md) |
+| 9 | **CryptoCabana** | ✅ Completed | [Read Writeup](./Day_09_CryptoCabana.md) |
+| 10 | **The Hollow Shell** | ✅ Completed | [Read Writeup](./Day_10_The_Hollow_Shell.md) |
+| 11 | **Infinity Pool** | ✅ Completed | [Read Writeup](./Day_11_Infinity_Pool.md) |
+| 12 | **After Hours** | ✅ Completed | [Read Writeup](./Day_12_After_Hours.md) |
+| 13 | **The Guestbook** | ✅ Completed | [Read Writeup](./Day_13_The_Guestbook.md) |
+| 14 | **Management Wants a Word** | ✅ Completed | [Read Writeup](./Day_14_Management_Wants_a_Word.md) |
 
 ---
 *The WiFi is open. Everything here is complimentary, including access to things you were never meant to find.*
